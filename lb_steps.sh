@@ -13,3 +13,5 @@ sudo docker build -t lb /home/ubuntu/volumes/lb/.
 sleep 5
 sudo docker run -d --name=haproxy -p 80:80 -v /home/ubuntu/volumes/lb/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg lb
 sleep 3
+
+
