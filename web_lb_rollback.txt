@@ -1,0 +1,14 @@
+docker stop web1
+docker rm web1
+docker stop web2
+docker rm web2
+docker stop web3
+docker rm web3
+vi /etc/hosts
+delete web1, web2, web3 entry
+:wq!
+
+rm /home/ubuntu/volumes/lb/haproxy.cfg
+
+docker stop haproxy
+docker rm haproxy
