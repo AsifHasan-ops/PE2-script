@@ -1,0 +1,2 @@
+FROM mariadb/server:10.4
+EXPOSE 3306 4444 4567 4568
