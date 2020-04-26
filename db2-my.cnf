@@ -1,0 +1,18 @@
+[mysqld]
+
+default_storage_engine          = InnoDB
+binlog_format                   = ROW
+
+innodb_flush_log_at_trx_commit  = 0
+innodb_flush_method             = O_DIRECT
+innodb_file_per_table           = 1
+innodb_autoinc_lock_mode        = 2
+innodb_lock_schedule_algorithm  = FCFS # MariaDB >10.1.19 and >10.2.3 only
+
+wsrep_on                        = ON
+wsrep_provider                  = /usr/lib/galera/libgalera_smm.so
+wsrep_cluster_name              = "PE2_galera"
+wsrep_sst_method                = rsync
+wsrep_cluster_address           = "gcomm://172.17.0.6,172.17.0.7,172.17.0.8"
+wsrep_sst_auth                  = "root:rootpass"
+wsrep_node_address              = 172.17.0.7
