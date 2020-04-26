@@ -77,3 +77,9 @@ sleep 2
 sudo curl  https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/mariadb-galera-if-set.sh > /home/ubuntu/mariadb-galera-if-set.sh
 sudo chmod +x /home/ubuntu/mariadb-galera-if-set.sh
 /home/ubuntu/mariadb-galera-if-set.sh
+
+docker restart db2 
+sleep 5
+docker restart db3
+
+
