@@ -1,3 +1,4 @@
+#!/bin/sh
 sudo mkdir -p /home/ubuntu/volumes/db1/conf.d
 sudo mkdir -p /home/ubuntu/volumes/db2/conf.d
 sudo mkdir -p /home/ubuntu/volumes/db3/conf.d
