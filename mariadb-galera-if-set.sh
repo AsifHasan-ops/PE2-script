@@ -5,7 +5,7 @@ myHostName2=dbgc2
 myHostName3=dbgc3
 
 dck=$(docker inspect db1 | grep  '"IPAddress":' | cut -c34-44 > /tmp/d.txt)
-ipaddr1=$(cat tmp/d.txt  | grep 172.17 | cut -d '"' -f2)
+ipaddr1=$(cat /tmp/d.txt  | grep 172.17 | cut -d '"' -f2)
 dck2=$(docker inspect db1 | grep  '"IPAddress":' | cut -c34-44 > /tmp/e.txt)
 ipaddr2=$(cat /tmp/e.txt  | grep 172.17 | cut -d '"' -f2)
 dck3=$(docker inspect db1 | grep  '"IPAddress":' | cut -c34-44 > /tmp/f.txt)
