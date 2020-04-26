@@ -1,9 +1,10 @@
+Impli:
 cd /home/ubuntu/
 wget https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/lb_steps.sh
 chmod +x /home/ubuntu/lb_steps.sh
 /home/ubuntu/lb_steps.sh
 
-
+Rollback:
 docker stop web1
 docker rm web1
 docker stop web2
