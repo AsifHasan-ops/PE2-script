@@ -1,0 +1,26 @@
+Impli:
+sudo rm /home/ubuntu/mariadb-galera.sh
+sudo curl https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/mariadb-galera.sh > /home/ubuntu/mariadb-galera.sh
+chmod +x /home/ubuntu/mariadb-galera.sh 
+/home/ubuntu/mariadb-galera.sh
+
+Rollback:
+docker stop db1
+docker rm db1
+docker stop db2
+docker rm db2
+docker stop db3
+docker rm db3
+
+
+sudo rm -rf /home/ubuntu/volumes/db1/conf.d
+sudo rm -rf /home/ubuntu/volumes/db1/datadir
+sudo rm /home/ubuntu/volumes/db2/conf.d/my.cnf
+sudo rm /home/ubuntu/volumes/db3/conf.d/my.cnf
+sudo rm /home/ubuntu/volumes/db1/Dockerfile
+sudo rm /home/ubuntu/volumes/db2/Dockerfile
+sudo rm /home/ubuntu/volumes/db3/Dockerfile
+
+vi /etc/hosts
+delete db1 db2 db3 entry
+:wq!
