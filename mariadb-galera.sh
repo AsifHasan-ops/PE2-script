@@ -27,7 +27,7 @@ docker run -d \
 --volume /home/ubuntu/volumes/db1/conf.d:/etc/mysql/mariadb.conf.d \
 db1
 
-sleep 5
+sleep 30
 sudo curl https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/Dockerfile > /home/ubuntu/volumes/db2/Dockerfile
 sleep 2
 sudo curl https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/db2-my.cnf > /home/ubuntu/volumes/db2/conf.d/my.cnf
@@ -49,7 +49,7 @@ docker run -d \
 --volume /home/ubuntu/volumes/db2/conf.d:/etc/mysql/mariadb.conf.d \
 db2
 
-sleep 5
+sleep 30
 sudo curl https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/Dockerfile > /home/ubuntu/volumes/db3/Dockerfile
 sleep 2
 sudo curl https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/db3-my.cnf > /home/ubuntu/volumes/db3/conf.d/my.cnf
@@ -71,7 +71,7 @@ docker run -d \
 --volume /home/ubuntu/volumes/db3/conf.d:/etc/mysql/mariadb.conf.d \
 db3
 
-sleep 10
+sleep 30
 docker exec -it db1 mysql -uroot -prootpass -e "SHOW STATUS LIKE 'wsrep_cluster_size'";
 
 sudo curl  https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/mariadb-galera-if-set.sh > /home/ubuntu/mariadb-galera-if-set.sh
