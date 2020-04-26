@@ -1,5 +1,6 @@
 Impli:
 sudo rm /home/ubuntu/mariadb-galera.sh
+sudo rm /home/ubuntu/mariadb-galera-if-set.sh
 sudo curl https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/mariadb-galera.sh > /home/ubuntu/mariadb-galera.sh
 chmod +x /home/ubuntu/mariadb-galera.sh 
 /home/ubuntu/mariadb-galera.sh
