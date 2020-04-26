@@ -82,4 +82,6 @@ docker restart db2
 sleep 5
 docker restart db3
 
+docker exec -it db1 mysql -uroot -prootpass -e "SHOW STATUS LIKE 'wsrep_cluster_size'";
+
 
