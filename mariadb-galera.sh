@@ -74,14 +74,14 @@ db3
 sleep 5
 docker exec -it db1 mysql -uroot -prootpass -e "SHOW STATUS LIKE 'wsrep_cluster_size'";
 sleep 2
-sudo curl  https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/mariadb-galera-if-set.sh > /home/ubuntu/mariadb-galera-if-set.sh
-sudo chmod +x /home/ubuntu/mariadb-galera-if-set.sh
-/home/ubuntu/mariadb-galera-if-set.sh
-
 docker restart db2 
 sleep 5
 docker restart db3
 
 docker exec -it db1 mysql -uroot -prootpass -e "SHOW STATUS LIKE 'wsrep_cluster_size'";
+
+sudo curl  https://raw.githubusercontent.com/AsifHasan-ops/PE2-script/master/mariadb-galera-if-set.sh > /home/ubuntu/mariadb-galera-if-set.sh
+sudo chmod +x /home/ubuntu/mariadb-galera-if-set.sh
+/home/ubuntu/mariadb-galera-if-set.sh
 
 
