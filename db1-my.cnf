@@ -15,4 +15,3 @@ wsrep_cluster_name              = "PE2_galera"
 wsrep_sst_method                = rsync
 wsrep_cluster_address           = "gcomm://"
 wsrep_sst_auth                  = "root:rootpass"
-wsrep_node_address              = 172.17.0.6
