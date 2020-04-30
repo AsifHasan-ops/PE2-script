@@ -13,6 +13,5 @@ wsrep_on                        = ON
 wsrep_provider                  = /usr/lib/galera/libgalera_smm.so
 wsrep_cluster_name              = "PE2_galera"
 wsrep_sst_method                = rsync
-wsrep_cluster_address           = "gcomm://172.17.0.6,172.17.0.7,172.17.0.8"
 wsrep_sst_auth                  = "root:rootpass"
-wsrep_node_address              = 172.17.0.8
+
